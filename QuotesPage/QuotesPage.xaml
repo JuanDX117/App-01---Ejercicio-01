@@ -1,0 +1,24 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuotesPage.QuotesPage"
+             Padding="20">
+    <StackLayout>
+        <!-- Lista de frases -->
+        <ListView x:Name="quotesListView">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Frase 1</x:String>
+                    <x:String>Frase 2</x:String>
+                    <x:String>Frase 3</x:String>
+                    <!-- Agrega más frases aquí -->
+                </x:Array>
+            </ListView.ItemsSource>
+        </ListView>
+
+        <!-- Control deslizante -->
+        <Slider x:Name="slider" Maximum="50" Minimum="16" />
+
+        <!-- Label para mostrar el valor del Slider -->
+        <Label x:Name="sliderValueLabel" />
+    </StackLayout>
+</ContentPage>
